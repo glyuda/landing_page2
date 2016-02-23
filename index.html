@@ -6,7 +6,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Самостоятельная верстка посадочной страницы с Bootstrap</title>
 
     <meta name="description" content=""/>
     <meta name="keywords" content=""/>
@@ -19,12 +19,56 @@
         var htmlEl = document.getElementsByTagName('html')[0];
         htmlEl.className = htmlEl.className.replace(/\bno-js\b/, 'has-js');
     </script>
-
+<!--Подключение недостающих шрифтов-->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+<!--Подлкючение bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="css/base.css">
 </head>
 <body>
 <div class="wrapper">
     <header class="page-header">
+        <!--Блок с логотипом и конками соц.сетей-->
+        <div class="icons">
+            <img class="logo" src="images/icons/landx.png" />
+
+            <div  class="social_networks">
+                <img src="images/icons/social_networks.png" />
+            </div>
+        </div>
+
+        <!--Заголовок страницы-->
+        <h1>Get the Best <b><span class="blue_font">Solution</span></b> for Your <b>Business</b></h1>
+
+        <!--Краткое описание страницы-->
+        <div class="description">
+            <p>Accelerator photo sharing business school drop out ramen hustle crush it revenue traction platforms. Coworking viral landing page user base.</p>
+        </div>
+
+        <!--Форма ввода данных для подписки-->
+        <div class="subscription-form">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <form class="fm-get-started">
+                            <label for="inputName" class="sr-only">Your Name</label>
+                            <input type="text" id="inputName" class="form-control" placeholder="Your Name" required autofocus>
+
+                            <label for="inputEmail" class="sr-only">Your E-Mail</label>
+                            <input type="email" id="inputEmail" class="form-control" placeholder="Your E-Mail" required>
+
+                            <label for="inputPhone" class="sr-only">Phone Number</label>
+                            <input type="text" id="inputPhone" class="form-control" placeholder="Phone Number" required>
+
+                            <button class="btn btn-lg btn-primary btn-block" type="submit">GET STARTED</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.subscription-form-->
+
+        <img class="sub-heading" src="images/fm_get_started_sub_heading.png">
     </header><!-- / .page-header -->
 
     <main class="page-content">

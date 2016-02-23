@@ -1,0 +1,103 @@
+$blue_color: #0199e6;
+
+.page-header {
+  height: 750px;
+  margin: 0;
+  background: #494848 url('../images/backgrounds/header_background.png') 100% 100% no-repeat;
+
+  color: #fff;
+
+  .icons {
+    width: 100%;
+    position: absolute;
+    padding-left: 10%;
+    padding-right: 10%;
+    top: 50px;
+    overflow: hidden;
+
+    .logo {
+      float: left;
+    }
+
+    .social_networks {
+      float: right;
+    }
+  }
+
+  h1 {
+    width: 100%;
+    position: absolute;
+    top: 230px;
+    text-align: center;
+
+    font-family: 'Raleway', sans-serif;
+    font-size: 45px;
+    line-height: 60px;
+  }
+  .description {
+    width: 100%;
+    position: absolute;
+    top: 330px;
+    text-align: center;
+
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+
+    p {
+      width: 695px;
+      margin: 0 auto;
+    }
+  }
+
+  .subscription-form {
+    width: 100%;
+    position: absolute;
+    top: 440px;
+
+    .container {
+      padding-left: 15px;
+      padding-right: 15px;
+
+      .fm-get-started {
+        max-width: 944px;
+        margin: 0 auto;
+        overflow: hidden;
+
+        background: url(../images/backgrounds/fm_get_started_bg.png); /* Фоновый рисунок - черный с прозрачностью 0.5;
+                                            сделано картинкой, чтобы не перекрывать прозрачность дочерних элементов */
+
+        .form-control {
+          box-sizing: border-box;
+          background-color: rgba(0, 0, 0, 1);
+
+          border-color: $blue_color;
+          box-shadow: inset 3px 0 $blue_color;
+
+          float: left;
+          width: 20%;
+          height: 54px;
+          margin: 25px 0 25px 10px;
+        }
+
+        .btn-lg {
+          width: 30%;
+          float: right;
+          height: 54px;
+          margin: 25px 10px;
+        }
+      }
+    }
+  }
+
+  .sub-heading {
+    position: absolute;
+    top: 550px;
+    left: 50%;
+  }
+}
+
+.blue_font {
+  color: $blue_color;
+}
+
