@@ -9,10 +9,10 @@ $blue_color: #0199e6;
 
   .icons {
     width: 100%;
-    position: absolute;
-    padding-left: 10%;
+    padding-top: 50px;
     padding-right: 10%;
-    top: 50px;
+    padding-bottom: 165px;
+    padding-left: 10%;
     overflow: hidden;
 
     .logo {
@@ -26,8 +26,8 @@ $blue_color: #0199e6;
 
   h1 {
     width: 100%;
-    position: absolute;
-    top: 230px;
+    padding-bottom: 45px;
+    margin: 0;
     text-align: center;
 
     font-family: 'Raleway', sans-serif;
@@ -46,8 +46,7 @@ $blue_color: #0199e6;
   }
   .description {
     width: 100%;
-    position: absolute;
-    top: 330px;
+    padding-bottom: 70px;
     text-align: center;
 
     font-family: 'Source Sans Pro', sans-serif;
@@ -71,8 +70,7 @@ $blue_color: #0199e6;
 
   .subscription-form {
     width: 100%;
-    position: absolute;
-    top: 440px;
+    padding-bottom: 10px;
 
     .container {
       padding-left: 15px;
@@ -83,14 +81,14 @@ $blue_color: #0199e6;
         margin: 0 auto;
         overflow: hidden;
 
-        background: url(../images/backgrounds/fm_get_started_bg.png); /* Фоновый рисунок - черный с прозрачностью 0.5;
-                                            сделано картинкой, чтобы не перекрывать прозрачность дочерних элементов */
+        background: url(../images/backgrounds/fm_get_started_bg.png); /* пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ 0.5;
+                                            пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
 
         .form-control {
           box-sizing: border-box;
           background-color: rgba(0, 0, 0, 1);
 
-          border-color: rgba(1, 153, 230, 0.3); //т.к. у border нет возможности указать opacity, а по дизайну оно 30% используем rgba
+          border-color: rgba(1, 153, 230, 0.3); //пїЅ.пїЅ. пїЅ border пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ opacity, пїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ 30% пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ rgba
           box-shadow: inset 3px 0 $blue_color;
 
           float: left;
@@ -110,9 +108,18 @@ $blue_color: #0199e6;
   }
 
   .sub-heading {
-    position: absolute;
-    top: 550px;
-    left: 50%;
+    width: 265px;
+    margin: 0 auto;
+    padding-top: 10px;
+    transform: translate(85px,0);
+
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    line-height: 30px;
+
+    background: url(../images/icons/arrow_icon.png) 100% -10% no-repeat; /* РџСѓС‚СЊ Рє С„Р°Р№Р»Сѓ СЃ РёР·РѕР±СЂР°Р¶РµРЅРёРµРј,
+                                                   РїРѕР»РѕР¶РµРЅРёРµ РІ РїСЂР°РІРѕРј РІРµСЂС…РЅРµРј СѓРіР»Сѓ
+                                                   Рё РѕС‚РјРµРЅР° РїРѕРІС‚РѕСЂРµРЅРёСЏ С„РѕРЅР° */
   }
 }
 
