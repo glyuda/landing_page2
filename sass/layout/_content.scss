@@ -1,9 +1,4 @@
-.browser_image {
-  display: inline-block;
-  float: left;
-  margin: 0 25px;
-}
-
+/*Общие стили для разных блоков*/
 .white_bg {
   background-color: #fff;
 }
@@ -12,6 +7,26 @@
   background-color: #f7f8fa;
 }
 
+h2{
+  font-family: 'Raleway', sans-serif;
+  font-size: 35px;
+  line-height: 50px;
+}
+
+h3 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  margin: 0;
+
+  color: #323232;
+}
+
+hr {
+  width: 68px;
+  border-top: 1px solid $blue_color;
+}
+
+/*Стили для содержимого блоков класса features_block*/
 .features_block {
   height: 625px;
   margin: 0;
@@ -19,9 +34,16 @@
   .features_container {
     padding-top: 100px;
     padding-bottom: 100px;
+
     width: 1168px;
     margin: 0 auto;
     overflow: hidden;
+
+    .browser_image {
+      display: inline-block;
+      float: left;
+      margin: 0 25px;
+    }
 
     .feature_description {
       float: left;
@@ -32,16 +54,9 @@
 
         h2{
           margin: 5px 0;
-
-          font-family: 'Raleway', sans-serif;
-          font-size: 35px;
-          line-height: 50px;
         }
 
         hr {
-          width: 68px;
-          border-top: 1px solid $blue_color;
-
           float: left;
         }
       }
@@ -69,13 +84,8 @@
             width: 504px;
 
             h3 {
-              font-family: 'Raleway', sans-serif;
-              font-weight: bold;
               font-size: 16px;
               line-height: 25px;
-              margin: 0;
-
-              color: #323232;
             }
           }
         }
@@ -89,3 +99,84 @@
     }
   }
 }
+/*Конец описания стилей для содержимого блоков класса features_block*/
+
+/*Стили для содержимого блоков класса landx_features_block*/
+.landx_features_block {
+  padding-top: 115px;
+  padding-bottom: 105px;
+
+  .landx_features_container {
+    width: 1075px;
+    height: 634px;
+    margin: 0 auto;
+
+    .landx_features_header {
+      width: 100%;
+      display: block;
+      margin: 5px auto;
+
+      h2 {
+        text-align: center;
+      }
+
+      hr {
+        alignment: center;
+      }
+    }
+
+    .landx_features_general {
+      overflow: hidden;
+
+      p {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 17px;
+        line-height: 25px;
+
+        text-align: center;
+        padding-bottom: 70px;
+
+        color: #727272;
+      }
+
+      .landx_features_general_boxes {
+        overflow: hidden;
+        width: 100%;
+        margin: 0 auto;
+        padding-bottom: 50px;
+
+        .landx_feature_box {
+          width: 300px;
+          height: 200px;
+          margin: 0 28px 45px 28px;
+          float: left;
+
+          img {
+            width: 50px;
+            height: 60px;
+            display: block;
+            margin: 0 auto;
+            padding-bottom: 15px;
+          }
+
+          .landx_feature_descr {
+
+            h3 {
+              font-size: 20px;
+              line-height: 65px;
+
+              text-align: center;
+            }
+
+            p {
+              font-size: 16px;
+            }
+
+          }
+        }
+      }
+
+    }
+  }
+}
+/*Конец описания стилей для содержимого блоков класса landx_features_block*/
