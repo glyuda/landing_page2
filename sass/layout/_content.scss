@@ -315,9 +315,52 @@ hr {
       }
     }
   }
+}
+
+.watch_video_block {
+  padding-top: 115px;
+  padding-bottom: 105px;
+
+  .watch_video_container {
+    width: 945px;
+    margin: 0 auto;
+
+    img {
+      padding-bottom: 40px;
+    }
+
+    .features_list_block {
+      width: 861px;
+      margin: 0 auto;
+      overflow: hidden;
+
+      .feature {
+        width: 33%;
+
+        p {
+          font-family: 'Raleway', sans-serif;
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 64px;
+        }
+
+        .fa {
+          padding: 10px;
+        }
+      }
+
+      .left_float {
+        float: left;
+      }
+      .right_float {
+        float: right;
+      }
+      .text_center {
+        text-align: center;
+      }
+    }
 
 
-
-
+  }
 
 }
