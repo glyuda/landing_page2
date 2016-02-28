@@ -4,7 +4,15 @@
 }
 
 .grey_bg {
-  background-color: #f7f8fa;
+  background-color: $light_grey_color;
+}
+
+.dark_grey_bg {
+  background-color: $dark_grey_color;
+}
+
+.blue_bg {
+  background-color: $blue_color;
 }
 
 h2{
@@ -17,13 +25,36 @@ h3 {
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
   margin: 0;
-
-  color: #323232;
 }
 
 hr {
   width: 68px;
   border-top: 1px solid $blue_color;
+}
+
+.block_header {
+  width: 100%;
+  display: block;
+  margin: 5px auto;
+
+  h2 {
+    text-align: center;
+  }
+
+  hr {
+    alignment: center;
+  }
+
+  p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 17px;
+    line-height: 25px;
+
+    text-align: center;
+    padding-bottom: 70px;
+
+    color: #727272;
+  }
 }
 
 /*Стили для содержимого блоков класса features_block*/
@@ -86,6 +117,8 @@ hr {
             h3 {
               font-size: 16px;
               line-height: 25px;
+
+              color: #323232;
             }
           }
         }
@@ -108,37 +141,10 @@ hr {
 
   .landx_features_container {
     width: 1075px;
-    height: 634px;
+    height: 721px;
     margin: 0 auto;
 
-    .landx_features_header {
-      width: 100%;
-      display: block;
-      margin: 5px auto;
-
-      h2 {
-        text-align: center;
-      }
-
-      hr {
-        alignment: center;
-      }
-    }
-
     .landx_features_general {
-      overflow: hidden;
-
-      p {
-        font-family: 'Source Sans Pro', sans-serif;
-        font-size: 17px;
-        line-height: 25px;
-
-        text-align: center;
-        padding-bottom: 70px;
-
-        color: #727272;
-      }
-
       .landx_features_general_boxes {
         overflow: hidden;
         width: 100%;
@@ -165,13 +171,14 @@ hr {
               font-size: 20px;
               line-height: 65px;
 
+              color: #323232;
+
               text-align: center;
             }
 
             p {
               font-size: 16px;
             }
-
           }
         }
       }
@@ -180,3 +187,137 @@ hr {
   }
 }
 /*Конец описания стилей для содержимого блоков класса landx_features_block*/
+
+/*Стили для содержимого блоков класса pricing_table_block*/
+.pricing_table_block {
+  padding-top: 115px;
+  padding-bottom: 105px;
+
+  .pricing_table_container {
+    width: 1075px;
+    margin: 0 auto;
+
+    .pricing_table_general {
+      overflow: hidden;
+      padding-left: 1%;
+
+      .tariff_block {
+        float: left;
+        padding: 0 15px;
+        width: 33%;
+
+        .tariff_header {
+          height: 99px;
+
+          h3 {
+            font-size: 20px;
+            line-height: 65px;
+            font-weight: 600;
+
+            color: #fff;
+
+            text-align: center;
+          }
+
+          p {
+            font-family: 'Raleway', sans-serif;
+            font-size: 16px;
+            line-height: 1;
+
+            color: #fff;
+
+            text-align: center;
+            padding-bottom: 70px;
+
+            .price {
+              color: $blue_color;
+              font-weight: bold;
+            }
+          }
+        }
+
+        .tariff_options {
+          background-color: #fff;
+
+          .option_row {
+            overflow: hidden;
+            padding: 15px 30px;
+
+            border-bottom-style: dashed;
+            border-bottom-width: 1px;
+
+            .option_description {
+              float: left;
+              margin: 0;
+
+              font-family: 'Raleway', sans-serif;
+              font-size: 16px;
+              line-height: 24px;
+            }
+
+            .option_value {
+              float: right;
+              margin: 0;
+
+              font-weight: bold;
+
+            }
+          }
+
+        }
+
+        .block_footer {
+          overflow: hidden;
+          height: 76px;
+          padding: 15px 30px;
+
+          p {
+            float: left;
+            margin: 0;
+
+            font-family: 'Raleway', sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 45px;
+          }
+
+          button {
+            float: right;
+            width: 96px;
+            height: 42px;
+
+            font-family: 'Raleway', sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 1;
+          }
+
+          .white_button {
+            background-color: #fff;
+
+            border: 1px solid #727272;
+            border-radius: 3px;
+
+            color: #727272;
+          }
+
+          .blue_button {
+            background-color: $blue_color;
+
+            border: 1px solid $blue_color;
+            border-radius: 3px;
+
+            color: #fff;
+          }
+
+        }
+
+      }
+    }
+  }
+
+
+
+
+
+}
