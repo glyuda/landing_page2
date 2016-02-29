@@ -73,7 +73,7 @@ hr {
   }
 } //.block_header
 
-/*Стили для содержимого блоков класса features_block*/
+/*Уникальные стили для каждого из блоков */
 .features_block {
   height: 625px;
   margin: 0;
@@ -148,7 +148,6 @@ hr {
   } //.features_container
 } //.features_block
 
-/*Стили для содержимого блоков класса landx_features_block*/
 .info_block {
   padding-top: 115px;
   padding-bottom: 105px;
@@ -420,3 +419,34 @@ hr {
     }
   } //.trusted_container
 } //.info_block
+
+.get_started_block {
+  height: 449px;
+  margin: 0;
+  background: #494848 url('../images/backgrounds/get_started_bg.png') 100% 100% no-repeat;
+  padding-top: 141px;
+
+  color: #fff;
+
+  .text_block {
+    padding-bottom: 54px;
+
+    h2 {
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .small-font {
+      font-size: 20px;
+    }
+  } //.text_block
+
+  .btn-block {
+    width: 184px;
+  }
+
+  .btn-lg {
+    font-size: 16px;
+    padding: 10px;
+  }
+} //.get_started_block
