@@ -15,6 +15,19 @@
   background-color: $blue_color;
 }
 
+.left_float {
+  float: left;
+}
+.right_float {
+  float: right;
+}
+.text_center {
+  text-align: center;
+}
+.block_center {
+  margin: 0 auto;
+}
+
 h2{
   font-family: 'Raleway', sans-serif;
   font-size: 35px;
@@ -23,6 +36,14 @@ h2{
 
 h3 {
   font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  margin: 0;
+}
+
+h4 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  line-height: 25px;
   font-weight: bold;
   margin: 0;
 }
@@ -37,10 +58,6 @@ hr {
   display: block;
   margin: 5px auto;
 
-  h2 {
-    text-align: center;
-  }
-
   hr {
     alignment: center;
   }
@@ -50,12 +67,11 @@ hr {
     font-size: 17px;
     line-height: 25px;
 
-    text-align: center;
     padding-bottom: 70px;
 
     color: #727272;
   }
-}
+} //.block_header
 
 /*Стили для содержимого блоков класса features_block*/
 .features_block {
@@ -67,7 +83,6 @@ hr {
     padding-bottom: 100px;
 
     width: 1168px;
-    margin: 0 auto;
     overflow: hidden;
 
     .browser_image {
@@ -122,33 +137,29 @@ hr {
             }
           }
         }
-      }
+      } //.feature_general
 
       p {
         font-family: 'Source Sans Pro', sans-serif;
         font-size: 16px;
         line-height: 25px;
       }
-    }
-  }
-}
-/*Конец описания стилей для содержимого блоков класса features_block*/
+    } //.feature_description
+  } //.features_container
+} //.features_block
 
 /*Стили для содержимого блоков класса landx_features_block*/
-.landx_features_block {
+.info_block {
   padding-top: 115px;
   padding-bottom: 105px;
 
   .landx_features_container {
     width: 1075px;
-    height: 721px;
-    margin: 0 auto;
 
     .landx_features_general {
       .landx_features_general_boxes {
         overflow: hidden;
         width: 100%;
-        margin: 0 auto;
         padding-bottom: 50px;
 
         .landx_feature_box {
@@ -161,7 +172,6 @@ hr {
             width: 50px;
             height: 60px;
             display: block;
-            margin: 0 auto;
             padding-bottom: 15px;
           }
 
@@ -172,30 +182,19 @@ hr {
               line-height: 65px;
 
               color: #323232;
-
-              text-align: center;
             }
 
             p {
               font-size: 16px;
             }
-          }
-        }
-      }
-
-    }
-  }
-}
-/*Конец описания стилей для содержимого блоков класса landx_features_block*/
-
-/*Стили для содержимого блоков класса pricing_table_block*/
-.pricing_table_block {
-  padding-top: 115px;
-  padding-bottom: 105px;
+          } //.landx_feature_descr
+        } //.landx_feature_box
+      } //.landx_features_general_boxes
+    } //.landx_features_general
+  } //.landx_features_container
 
   .pricing_table_container {
     width: 1075px;
-    margin: 0 auto;
 
     .pricing_table_general {
       overflow: hidden;
@@ -215,8 +214,6 @@ hr {
             font-weight: 600;
 
             color: #fff;
-
-            text-align: center;
           }
 
           p {
@@ -226,7 +223,6 @@ hr {
 
             color: #fff;
 
-            text-align: center;
             padding-bottom: 70px;
 
             .price {
@@ -234,7 +230,7 @@ hr {
               font-weight: bold;
             }
           }
-        }
+        } //.tariff_header
 
         .tariff_options {
           background-color: #fff;
@@ -260,11 +256,9 @@ hr {
               margin: 0;
 
               font-weight: bold;
-
             }
-          }
-
-        }
+          } //.option_row
+        } //.tariff_options
 
         .block_footer {
           overflow: hidden;
@@ -309,21 +303,13 @@ hr {
 
             color: #fff;
           }
-
-        }
-
-      }
-    }
-  }
-}
-
-.watch_video_block {
-  padding-top: 115px;
-  padding-bottom: 105px;
+        } //.block_footer
+      } //.tariff_block
+    } //.pricing_table_general
+  } //.pricing_table_container
 
   .watch_video_container {
     width: 945px;
-    margin: 0 auto;
 
     img {
       padding-bottom: 40px;
@@ -331,7 +317,6 @@ hr {
 
     .features_list_block {
       width: 861px;
-      margin: 0 auto;
       overflow: hidden;
 
       .feature {
@@ -347,20 +332,91 @@ hr {
         .fa {
           padding: 10px;
         }
-      }
+      } //.feature
+    } //.features_list_block
+  } //watch_video_container
 
-      .left_float {
-        float: left;
-      }
-      .right_float {
-        float: right;
-      }
-      .text_center {
-        text-align: center;
-      }
+  .product_screenshots_container {
+    .swiper-container {
+      width: 1138px;
+      padding-top: 50px;
+      padding-bottom: 50px;
     }
 
+    .swiper-wrapper {
+      padding-bottom: 30px;
+    }
 
-  }
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 300px;
+      height: 300px;
+    }
 
-}
+    .swiper-pagination-bullet {
+        width: 15px;
+        height: 15px;
+    }
+  } //.product_screenshots_container
+
+  .trusted_container {
+    .logos_block {
+      width: 661px;
+      padding-bottom: 10px;
+      overflow: hidden;
+
+      .image_block {
+        float: left;
+        width: 25%;
+
+        img{
+          display: block;
+        }
+      }
+    } //.logos_block
+
+    .feedbacks_block {
+      width: 1155px;
+      overflow: hidden;
+
+      .feedback_block {
+        float: left;
+        width: 33%;
+
+        .quote_icon {
+          margin-bottom: -22px;
+
+          img {
+            display: block;
+          }
+        }
+
+        .quote_block {
+          background-image: url('../images/backgrounds/quote_bg.png');
+
+          width: 361px;
+          height: 243px;
+          margin-bottom: 10px;
+
+          p {
+            padding: 50px 35px 35px 35px;
+            margin: 0;
+
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 16px;
+            line-height: 25px;
+            color: #727272;
+          }
+        }
+
+        .quote_autor {
+          font-family: 'Source Sans Pro', sans-serif;
+          font-size: 13px;
+          line-height: 25px;
+          color: #727272;
+        }
+      }
+    }
+  } //.trusted_container
+} //.info_block
