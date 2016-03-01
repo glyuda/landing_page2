@@ -467,3 +467,43 @@ hr {
     font-weight: 600;
   }
 } //.contact_us_block
+
+.page_footer {
+  height: 283px;
+  margin: 0;
+  padding-top: 78px;
+
+  color: #919191;
+
+  .logo_block {
+    width: 101px;
+    padding-bottom: 27px;
+  }
+
+  h4 {
+    font-weight: normal;
+
+    padding-bottom: 23px;
+  }
+
+  .social_networks_footer {
+    width: 188px;
+  }
+} //.page_footer
+
+//Изменение пути к иконкам по сравнению с путями, прописанными в библиотеке
+.sb.gray a.facebook {
+  background-image: url(../images/icons/white_facebook.png);
+}
+.sb.gray a.twitter {
+  background-image: url(../images/icons/white_twitter_bird.png);
+}
+.sb.gray a.pinterest {
+  background-image: url(../images/icons/white_pinterest.png);
+}
+.sb.gray a.linkedin {
+  background-image: url(../images/icons/white_linkedin.png);
+}
+.sb.gray a.vimeo {
+  background-image: url(../images/icons/white_vimeo.png);
+}
