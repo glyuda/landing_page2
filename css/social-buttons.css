@@ -422,7 +422,7 @@ a.sb.gray:hover,
 .sb.gray a:hover,
 a.sb.gray:hover:after,
 .sb.gray a:hover:after {
-	background-color: #acabab;
+	background-color: #0199e6;
 }
 
 /* light-gray color */
@@ -523,11 +523,11 @@ a.sb.light-green:hover:after,
 /* yellow color */
 a.sb.yellow,
 .sb.yellow a,
-a.sb.yellow:after,
-.sb.yellow a:after {
-	background-color: #fff06c;
-	border-color: #dcb232;
-}
+ a.sb.yellow:after,
+ .sb.yellow a:after {
+	 background-color: #fff06c;
+	 border-color: #dcb232;
+ }
 a.sb.yellow:hover:after,
 .sb.yellow a:hover:after {
 	background-image: none;
@@ -539,6 +539,24 @@ a.sb.yellow:hover:after,
 	background-color: #fdf6b1;
 }
 
+/* white color */
+a.sb.white,
+.sb.white a,
+a.sb.white:after,
+.sb.white a:after {
+	background-color: #fff;
+	border-color: #f3f3f3;
+}
+a.sb.white:hover:after,
+.sb.white a:hover:after {
+	background-image: none;
+}
+a.sb.white:hover,
+.sb.white a:hover,
+a.sb.white:hover:after,
+.sb.white a:hover:after {
+	background-color: #0199e6;
+}
 
 /* STYLES
 ================================================ */

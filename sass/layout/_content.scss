@@ -1,4 +1,4 @@
-/*Общие стили для разных блоков*/
+/*General styles for the difference blocks*/
 .white_bg {
   background-color: #fff;
 }
@@ -29,28 +29,17 @@
 }
 
 h2{
-  font-family: 'Raleway', sans-serif;
-  font-size: 35px;
-  line-height: 50px;
+  font: 35px/50px 'Raleway', 'Arial', sans-serif;
 }
 
 h3 {
-  font-family: 'Raleway', sans-serif;
-  font-weight: bold;
+  font: bold 'Raleway', 'Arial', sans-serif;
   margin: 0;
 }
 
 h4 {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 16px;
-  line-height: 25px;
-  font-weight: bold;
+  font: 16px/25px bold 'Source Sans Pro', 'Verdana', sans-serif;
   margin: 0;
-}
-
-hr {
-  width: 68px;
-  border-top: 1px solid $blue_color;
 }
 
 .block_header {
@@ -58,14 +47,18 @@ hr {
   display: block;
   margin: 5px auto;
 
-  hr {
-    alignment: center;
+  h2:after {
+    display: block;
+    margin: 25px auto;
+    width: 68px;
+    height: 1px;
+
+    background-color: $blue_color;
+    content: '';
   }
 
   p {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 17px;
-    line-height: 25px;
+    font: 17px/25px 'Source Sans Pro', 'Verdana', sans-serif;
 
     padding-bottom: 70px;
 
@@ -73,11 +66,17 @@ hr {
   }
 } //.block_header
 
-/*Уникальные стили для каждого из блоков */
-.features_block {
-  height: 625px;
-  margin: 0;
+ul {
+  padding: 0;
+  padding: 0;
+}
 
+li {
+  list-style: none;
+}
+
+/*Unique styles for each of the blocks*/
+.features_block {
   .features_container {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -86,7 +85,6 @@ hr {
     overflow: hidden;
 
     .browser_image {
-      display: inline-block;
       float: left;
       margin: 0 25px;
     }
@@ -102,8 +100,14 @@ hr {
           margin: 5px 0;
         }
 
-        hr {
-          float: left;
+        h2:after {
+          display: block;
+          margin-top: 25px;
+          width: 68px;
+          height: 1px;
+
+          background-color: $blue_color;
+          content: '';
         }
       }
 
@@ -121,6 +125,7 @@ hr {
           img {
             height: 32px;
             width: 32px;
+            max-width: 100%;
             margin: 0;
             float: left;
           }
@@ -140,9 +145,7 @@ hr {
       } //.feature_general
 
       p {
-        font-family: 'Source Sans Pro', sans-serif;
-        font-size: 16px;
-        line-height: 25px;
+        font: 16px/25px 'Source Sans Pro', 'Verdana', sans-serif;
       }
     } //.feature_description
   } //.features_container
@@ -169,6 +172,7 @@ hr {
 
           img {
             width: 50px;
+            max-width: 100%;
             height: 60px;
             display: block;
             padding-bottom: 15px;
@@ -216,9 +220,7 @@ hr {
           }
 
           p {
-            font-family: 'Raleway', sans-serif;
-            font-size: 16px;
-            line-height: 1;
+            font: 16px/1 'Raleway', 'Arial', sans-serif;
 
             color: #fff;
 
@@ -245,9 +247,7 @@ hr {
               float: left;
               margin: 0;
 
-              font-family: 'Raleway', sans-serif;
-              font-size: 16px;
-              line-height: 24px;
+              font: 16px/24px 'Raleway', 'Arial', sans-serif;
             }
 
             .option_value {
@@ -268,10 +268,8 @@ hr {
             float: left;
             margin: 0;
 
-            font-family: 'Raleway', sans-serif;
-            font-size: 16px;
+            font: 16px/45px 'Raleway', 'Arial', sans-serif;
             font-weight: bold;
-            line-height: 45px;
           }
 
           button {
@@ -279,10 +277,8 @@ hr {
             width: 96px;
             height: 42px;
 
-            font-family: 'Raleway', sans-serif;
-            font-size: 16px;
+            font: 16px/1 'Raleway', 'Arial', sans-serif;
             font-weight: bold;
-            line-height: 1;
           }
 
           .white_button {
@@ -312,6 +308,7 @@ hr {
 
     img {
       padding-bottom: 40px;
+      max-width: 100%;
     }
 
     .features_list_block {
@@ -322,10 +319,7 @@ hr {
         width: 33%;
 
         p {
-          font-family: 'Raleway', sans-serif;
-          font-size: 18px;
-          font-weight: 600;
-          line-height: 64px;
+          font: 18px/64px 600 'Raleway', 'Arial', sans-serif;
         }
 
         .fa {
@@ -388,6 +382,7 @@ hr {
 
           img {
             display: block;
+            max-width: 100%;
           }
         }
 
@@ -402,17 +397,13 @@ hr {
             padding: 50px 35px 35px 35px;
             margin: 0;
 
-            font-family: 'Source Sans Pro', sans-serif;
-            font-size: 16px;
-            line-height: 25px;
+            font: 16px/25px 'Source Sans Pro', 'Verdana', sans-serif;
             color: #727272;
           }
         }
 
         .quote_autor {
-          font-family: 'Source Sans Pro', sans-serif;
-          font-size: 13px;
-          line-height: 25px;
+          font: 13px/25px 'Source Sans Pro', 'Verdana', sans-serif;
           color: #727272;
         }
       }
@@ -491,15 +482,24 @@ hr {
   }
 } //.page_footer
 
-//Изменение пути к иконкам по сравнению с путями, прописанными в библиотеке
+//Change the path to the icon relative to the ways prescribed in the library for the icons
+.sb a.facebook {
+  background-image: url(../images/icons/facebook.png);
+}
 .sb.gray a.facebook {
   background-image: url(../images/icons/white_facebook.png);
+}
+.sb a.twitter {
+  background-image: url(../images/icons/twitter_bird.png);
 }
 .sb.gray a.twitter {
   background-image: url(../images/icons/white_twitter_bird.png);
 }
 .sb.gray a.pinterest {
   background-image: url(../images/icons/white_pinterest.png);
+}
+.sb a.linkedin {
+  background-image: url(../images/icons/linkedin.png);
 }
 .sb.gray a.linkedin {
   background-image: url(../images/icons/white_linkedin.png);

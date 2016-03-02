@@ -23,14 +23,11 @@
   }
 
   h1 {
-    width: 100%;
     padding-bottom: 45px;
     margin: 0;
     text-align: center;
 
-    font-family: 'Raleway', sans-serif;
-    font-size: 45px;
-    line-height: 60px;
+    font: 45px/60px 'Raleway', 'Arial', sans-serif;
 
     @media all and (min-width: 640px) and (max-width: 980px) {
       font-size: 34px;
@@ -43,13 +40,10 @@
     }
   }
   .description {
-    width: 100%;
     padding-bottom: 70px;
     text-align: center;
 
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 20px;
-    line-height: 30px;
+    font: 20px/30px 'Source Sans Pro', 'Verdana', sans-serif;
 
     @media all and (min-width: 640px) and (max-width: 980px) {
       font-size: 18px;
@@ -61,10 +55,10 @@
     }
 
     p {
-      width: 695px;
+      max-width: 695px;
       margin: 0 auto;
     }
-  }
+  } //.description
 
   .subscription-form {
     width: 100%;
@@ -73,37 +67,8 @@
     .container {
       padding-left: 15px;
       padding-right: 15px;
-
-      .fm-get-started {
-        max-width: 944px;
-        margin: 0 auto;
-        overflow: hidden;
-
-        background: url(../images/backgrounds/fm_get_started_bg.png); /* ������� ������� - ������ � ������������� 0.5;
-                                            ������� ���������, ����� �� ����������� ������������ �������� ��������� */
-
-        .form-control {
-          box-sizing: border-box;
-          background-color: rgba(0, 0, 0, 1);
-
-          border-color: rgba(1, 153, 230, 0.3); //�.�. � border ��� ����������� ������� opacity, � �� ������� ��� 30% ���������� rgba
-          box-shadow: inset 3px 0 $blue_color;
-
-          float: left;
-          width: 20%;
-          height: 54px;
-          margin: 25px 0 25px 10px;
-        }
-
-        .btn-lg {
-          width: 30%;
-          float: right;
-          height: 54px;
-          margin: 25px 10px;
-        }
-      }
     }
-  }
+  } //.subscription-form
 
   .sub-heading {
     width: 265px;
@@ -111,15 +76,39 @@
     padding-top: 10px;
     transform: translate(85px,0);
 
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 16px;
-    line-height: 30px;
+    font: 16px/30px 'Source Sans Pro', 'Verdana', sans-serif;
 
-    background: url(../images/icons/arrow_icon.png) 100% -10% no-repeat; /* Путь к файлу с изображением,
-                                                   положение в правом верхнем углу
-                                                   и отмена повторения фона */
+    background: url(../images/icons/arrow_icon.png) 100% -10% no-repeat;
+  } //.sub-heading
+} //.page-header
+
+.fm-get-started {
+  max-width: 946px;
+  margin: 0 auto;
+  overflow: hidden;
+
+  background-color: rgba(0, 0, 0, 0.5);
+
+  .form-control {
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 1);
+
+    border-color: rgba(1, 153, 230, 0.3);
+    box-shadow: inset 3px 0 $blue_color;
+
+    float: left;
+    width: 20%;
+    height: 54px;
+    margin: 25px 0 25px 20px;
   }
-}
+
+  .btn-lg {
+    width: 23%;
+    float: right;
+    height: 54px;
+    margin: 25px 20px;
+  }
+} //.fm-get-started
 
 .blue_font {
   color: $blue_color;
