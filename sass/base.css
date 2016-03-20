@@ -5843,17 +5843,17 @@ html, body {
   display: block; }
 
 .page-header {
-  height: 750px;
+  overflow: hidden;
   margin: 0;
-  background: #494848 url("../images/backgrounds/header_background_2.png") 100% 100% no-repeat;
+  background: #494848 url("../images/backgrounds/header_background_2.png") no-repeat center center fixed;
+  background-size: cover;
   color: #fff; }
   .page-header .icons {
     width: 100%;
-    padding-top: 50px;
-    padding-right: 10%;
-    padding-bottom: 165px;
-    padding-left: 10%;
-    overflow: hidden; }
+    padding: 50px 10% 165px 10%; }
+    @media all and (min-width: 320px) and (max-width: 640px) {
+      .page-header .icons {
+        padding-bottom: 80px; } }
     .page-header .icons .logo {
       float: left; }
     .page-header .icons .social_networks {
@@ -5899,6 +5899,11 @@ html, body {
     transform: translate(85px, 0);
     font: 16px/30px 'Source Sans Pro', 'Verdana', sans-serif;
     background: url(../images/icons/arrow_icon.png) 100% -10% no-repeat; }
+    @media all and (min-width: 320px) and (max-width: 640px) {
+      .page-header .sub-heading {
+        margin: 0;
+        transform: translate(15px, -10px);
+        background: url(../images/icons/arrow_icon.png) 100% 5% no-repeat; } }
 
 .fm-get-started {
   max-width: 946px;
@@ -5914,11 +5919,24 @@ html, body {
     width: 20%;
     height: 54px;
     margin: 25px 0 25px 20px; }
+    @media all and (min-width: 320px) and (max-width: 640px) {
+      .fm-get-started .form-control {
+        float: none;
+        width: 80%;
+        margin: 25px auto; } }
   .fm-get-started .btn-lg, .fm-get-started .btn-group-lg > .btn {
     width: 23%;
     float: right;
     height: 54px;
     margin: 25px 20px; }
+    @media all and (min-width: 640px) and (max-width: 980px) {
+      .fm-get-started .btn-lg, .fm-get-started .btn-group-lg > .btn {
+        font-size: 16px; } }
+    @media all and (min-width: 320px) and (max-width: 640px) {
+      .fm-get-started .btn-lg, .fm-get-started .btn-group-lg > .btn {
+        float: none;
+        width: 80%;
+        margin: 25px auto; } }
 
 .blue_font {
   color: #0199e6; }
@@ -5960,7 +5978,7 @@ h4 {
   margin: 0; }
 
 .block_header {
-  width: 100%;
+  max-width: 100%;
   display: block;
   margin: 5px auto; }
   .block_header h2:after {
@@ -5976,7 +5994,6 @@ h4 {
     color: #727272; }
 
 ul {
-  padding: 0;
   padding: 0; }
 
 li {
@@ -5986,14 +6003,29 @@ li {
 .features_block .features_container {
   padding-top: 100px;
   padding-bottom: 100px;
-  width: 1168px;
+  max-width: 90%;
   overflow: hidden; }
+  @media all and (min-width: 320px) and (max-width: 800px) {
+    .features_block .features_container {
+      padding-bottom: 75px; } }
   .features_block .features_container .browser_image {
     float: left;
-    margin: 0 25px; }
+    max-width: 45%;
+    margin: 0 2%; }
+    @media all and (min-width: 320px) and (max-width: 800px) {
+      .features_block .features_container .browser_image {
+        clear: both;
+        max-width: 100%;
+        padding-bottom: 25px; } }
   .features_block .features_container .feature_description {
     float: left;
-    margin: 0 25px; }
+    max-width: 45%;
+    margin: 0 2%; }
+    @media all and (min-width: 320px) and (max-width: 800px) {
+      .features_block .features_container .feature_description {
+        clear: both;
+        max-width: 95%;
+        margin-bottom: 25px; } }
     .features_block .features_container .feature_description .feature_header {
       overflow: hidden; }
       .features_block .features_container .feature_description .feature_header h2 {
@@ -6006,7 +6038,6 @@ li {
         background-color: #0199e6;
         content: ''; }
     .features_block .features_container .feature_description .feature_general {
-      width: 536px;
       padding: 25px 0; }
       .features_block .features_container .feature_description .feature_general p {
         margin-bottom: 25px; }
@@ -6015,13 +6046,12 @@ li {
         .features_block .features_container .feature_description .feature_general .feature img {
           height: 32px;
           width: 32px;
-          max-width: 100%;
-          margin: 0;
+          margin: 5px;
           float: left; }
         .features_block .features_container .feature_description .feature_general .feature .feature_descr {
-          padding: 0 20px;
-          float: left;
-          width: 504px; }
+          width: 80%;
+          padding: 0 10px;
+          float: left; }
           .features_block .features_container .feature_description .feature_general .feature .feature_descr h3 {
             font-size: 16px;
             line-height: 25px;
@@ -6030,155 +6060,214 @@ li {
       font: 16px/25px 'Source Sans Pro', 'Verdana', sans-serif; }
 
 .info_block {
-  padding-top: 115px;
-  padding-bottom: 105px; }
+  padding-top: 100px;
+  padding-bottom: 55px; }
   .info_block .landx_features_container {
-    width: 1075px; }
+    max-width: 90%; }
     .info_block .landx_features_container .landx_features_general .landx_features_general_boxes {
       overflow: hidden;
-      width: 100%;
+      max-width: 100%;
       padding-bottom: 50px; }
       .info_block .landx_features_container .landx_features_general .landx_features_general_boxes .landx_feature_box {
-        width: 300px;
-        height: 200px;
-        margin: 0 28px 45px 28px;
+        max-width: 33%;
+        margin: 0 auto;
+        padding-bottom: 45px;
         float: left; }
+        @media all and (min-width: 640px) and (max-width: 980px) {
+          .info_block .landx_features_container .landx_features_general .landx_features_general_boxes .landx_feature_box {
+            max-width: 50%; } }
+        @media all and (min-width: 320px) and (max-width: 640px) {
+          .info_block .landx_features_container .landx_features_general .landx_features_general_boxes .landx_feature_box {
+            max-width: 99%;
+            clear: both; } }
         .info_block .landx_features_container .landx_features_general .landx_features_general_boxes .landx_feature_box img {
-          width: 50px;
-          max-width: 100%;
-          height: 60px;
           display: block;
+          max-width: 90%;
+          height: 60px;
           padding-bottom: 15px; }
         .info_block .landx_features_container .landx_features_general .landx_features_general_boxes .landx_feature_box .landx_feature_descr h3 {
+          max-width: 90%;
+          margin: 0 auto;
           font-size: 20px;
           line-height: 65px;
           color: #323232; }
         .info_block .landx_features_container .landx_features_general .landx_features_general_boxes .landx_feature_box .landx_feature_descr p {
+          max-width: 90%;
+          margin: 0 auto;
+          text-align: justify;
           font-size: 16px; }
-  .info_block .pricing_table_container {
-    width: 1075px; }
-    .info_block .pricing_table_container .pricing_table_general {
-      overflow: hidden;
-      padding-left: 1%; }
-      .info_block .pricing_table_container .pricing_table_general .tariff_block {
-        float: left;
-        padding: 0 15px;
-        width: 33%; }
-        .info_block .pricing_table_container .pricing_table_general .tariff_block .tariff_header {
-          height: 99px; }
-          .info_block .pricing_table_container .pricing_table_general .tariff_block .tariff_header h3 {
-            font-size: 20px;
-            line-height: 65px;
-            font-weight: 600;
-            color: #fff; }
-          .info_block .pricing_table_container .pricing_table_general .tariff_block .tariff_header p {
-            font: 16px/1 'Raleway', 'Arial', sans-serif;
-            color: #fff;
-            padding-bottom: 70px; }
-            .info_block .pricing_table_container .pricing_table_general .tariff_block .tariff_header p .price {
-              color: #0199e6;
-              font-weight: bold; }
-        .info_block .pricing_table_container .pricing_table_general .tariff_block .tariff_options {
-          background-color: #fff; }
-          .info_block .pricing_table_container .pricing_table_general .tariff_block .tariff_options .option_row {
-            overflow: hidden;
-            padding: 15px 30px;
-            border-bottom-style: dashed;
-            border-bottom-width: 1px; }
-            .info_block .pricing_table_container .pricing_table_general .tariff_block .tariff_options .option_row .option_description {
-              float: left;
-              margin: 0;
-              font: 16px/24px 'Raleway', 'Arial', sans-serif; }
-            .info_block .pricing_table_container .pricing_table_general .tariff_block .tariff_options .option_row .option_value {
-              float: right;
-              margin: 0;
-              font-weight: bold; }
-        .info_block .pricing_table_container .pricing_table_general .tariff_block .block_footer {
+  .info_block .pricing_table_container .pricing_table_general {
+    overflow: hidden;
+    margin: 0 auto;
+    max-width: 90%; }
+    .info_block .pricing_table_container .pricing_table_general .tariff_block {
+      float: left;
+      min-width: 33%;
+      margin: 0 auto;
+      padding: 0 1%; }
+      @media all and (min-width: 320px) and (max-width: 980px) {
+        .info_block .pricing_table_container .pricing_table_general .tariff_block {
+          min-width: 100%;
+          clear: both;
+          padding: 0 20% 15px 20%; } }
+      .info_block .pricing_table_container .pricing_table_general .tariff_block .tariff_header {
+        color: #fff; }
+        .info_block .pricing_table_container .pricing_table_general .tariff_block .tariff_header h3 {
+          font-size: 20px;
+          line-height: 65px;
+          font-weight: 600; }
+        .info_block .pricing_table_container .pricing_table_general .tariff_block .tariff_header p {
+          font: 16px/1 'Raleway', 'Arial', sans-serif;
+          padding-bottom: 30px; }
+          .info_block .pricing_table_container .pricing_table_general .tariff_block .tariff_header p .price {
+            color: #0199e6;
+            font-weight: bold; }
+      .info_block .pricing_table_container .pricing_table_general .tariff_block .tariff_options {
+        background-color: #fff; }
+        .info_block .pricing_table_container .pricing_table_general .tariff_block .tariff_options .option_row {
           overflow: hidden;
-          height: 76px;
-          padding: 15px 30px; }
-          .info_block .pricing_table_container .pricing_table_general .tariff_block .block_footer p {
+          padding: 15px 30px;
+          border-bottom-style: dashed;
+          border-bottom-width: 1px; }
+          .info_block .pricing_table_container .pricing_table_general .tariff_block .tariff_options .option_row .option_description {
             float: left;
             margin: 0;
-            font: 16px/45px 'Raleway', 'Arial', sans-serif;
-            font-weight: bold; }
-          .info_block .pricing_table_container .pricing_table_general .tariff_block .block_footer button {
+            font: 16px/24px 'Raleway', 'Arial', sans-serif; }
+            @media all and (min-width: 320px) and (max-width: 640px) {
+              .info_block .pricing_table_container .pricing_table_general .tariff_block .tariff_options .option_row .option_description {
+                font-size: 12px;
+                line-height: 20px; } }
+          .info_block .pricing_table_container .pricing_table_general .tariff_block .tariff_options .option_row .option_value {
             float: right;
-            width: 96px;
-            height: 42px;
-            font: 16px/1 'Raleway', 'Arial', sans-serif;
+            margin: 0;
             font-weight: bold; }
-          .info_block .pricing_table_container .pricing_table_general .tariff_block .block_footer .white_button {
-            background-color: #fff;
-            border: 1px solid #727272;
-            border-radius: 3px;
-            color: #727272; }
-          .info_block .pricing_table_container .pricing_table_general .tariff_block .block_footer .blue_button {
-            background-color: #0199e6;
-            border: 1px solid #0199e6;
-            border-radius: 3px;
-            color: #fff; }
+      .info_block .pricing_table_container .pricing_table_general .tariff_block .block_footer {
+        overflow: hidden;
+        padding: 15px 30px; }
+        .info_block .pricing_table_container .pricing_table_general .tariff_block .block_footer p {
+          float: left;
+          margin: 0;
+          font: 16px/45px 'Raleway', 'Arial', sans-serif;
+          font-weight: bold; }
+          @media all and (min-width: 320px) and (max-width: 640px) {
+            .info_block .pricing_table_container .pricing_table_general .tariff_block .block_footer p {
+              clear: both;
+              min-width: 100%;
+              text-align: center;
+              font-size: 14px;
+              line-height: 36px; } }
+        .info_block .pricing_table_container .pricing_table_general .tariff_block .block_footer button {
+          float: right;
+          min-width: 40%;
+          height: 42px;
+          border-radius: 3px;
+          font: 16px/1 'Raleway', 'Arial', sans-serif;
+          font-weight: bold; }
+          @media all and (min-width: 320px) and (max-width: 640px) {
+            .info_block .pricing_table_container .pricing_table_general .tariff_block .block_footer button {
+              clear: both;
+              min-width: 100%;
+              font-size: 14px;
+              line-height: 1; } }
+        .info_block .pricing_table_container .pricing_table_general .tariff_block .block_footer .white_button {
+          background-color: #fff;
+          border: 1px solid #727272;
+          color: #727272; }
+        .info_block .pricing_table_container .pricing_table_general .tariff_block .block_footer .blue_button {
+          background-color: #0199e6;
+          border: 1px solid #0199e6;
+          color: #fff; }
   .info_block .watch_video_container {
-    width: 945px; }
+    margin: 0 auto;
+    max-width: 90%; }
     .info_block .watch_video_container img {
-      padding-bottom: 40px;
-      max-width: 100%; }
+      display: block;
+      max-width: 100%;
+      margin: 0 auto;
+      padding-bottom: 40px; }
     .info_block .watch_video_container .features_list_block {
-      width: 861px;
+      max-width: 100%;
       overflow: hidden; }
       .info_block .watch_video_container .features_list_block .feature {
-        width: 33%; }
+        min-width: 33%;
+        margin: 0 auto;
+        padding: 0 1%; }
+        @media all and (min-width: 320px) and (max-width: 980px) {
+          .info_block .watch_video_container .features_list_block .feature {
+            min-width: 100%;
+            clear: both;
+            padding-bottom: 15px; } }
         .info_block .watch_video_container .features_list_block .feature p {
           font: 18px/64px 600 'Raleway', 'Arial', sans-serif; }
         .info_block .watch_video_container .features_list_block .feature .fa {
           padding: 10px; }
-  .info_block .product_screenshots_container .swiper-container {
-    width: 1138px;
-    padding-top: 50px;
-    padding-bottom: 50px; }
-  .info_block .product_screenshots_container .swiper-wrapper {
-    padding-bottom: 30px; }
-  .info_block .product_screenshots_container .swiper-slide {
-    background-position: center;
-    background-size: cover;
-    width: 300px;
-    height: 300px; }
-  .info_block .product_screenshots_container .swiper-pagination-bullet {
-    width: 15px;
-    height: 15px; }
-  .info_block .trusted_container .logos_block {
-    width: 661px;
-    padding-bottom: 10px;
-    overflow: hidden; }
-    .info_block .trusted_container .logos_block .image_block {
-      float: left;
-      width: 25%; }
-      .info_block .trusted_container .logos_block .image_block img {
-        display: block; }
-  .info_block .trusted_container .feedbacks_block {
-    width: 1155px;
-    overflow: hidden; }
-    .info_block .trusted_container .feedbacks_block .feedback_block {
-      float: left;
-      width: 33%; }
-      .info_block .trusted_container .feedbacks_block .feedback_block .quote_icon {
-        margin-bottom: -22px; }
-        .info_block .trusted_container .feedbacks_block .feedback_block .quote_icon img {
-          display: block;
-          max-width: 100%; }
-      .info_block .trusted_container .feedbacks_block .feedback_block .quote_block {
-        background-image: url("../images/backgrounds/quote_bg.png");
-        width: 361px;
-        height: 243px;
-        margin-bottom: 10px; }
-        .info_block .trusted_container .feedbacks_block .feedback_block .quote_block p {
-          padding: 50px 35px 35px 35px;
-          margin: 0;
-          font: 16px/25px 'Source Sans Pro', 'Verdana', sans-serif;
+  .info_block .product_screenshots_container {
+    margin: 0 auto;
+    max-width: 90%; }
+    .info_block .product_screenshots_container .swiper-container {
+      max-width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px; }
+    .info_block .product_screenshots_container .swiper-wrapper {
+      padding-bottom: 30px; }
+    .info_block .product_screenshots_container .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 300px;
+      height: 300px; }
+    .info_block .product_screenshots_container .swiper-pagination-bullet {
+      width: 15px;
+      height: 15px; }
+  .info_block .trusted_container {
+    margin: 0 auto;
+    max-width: 90%; }
+    .info_block .trusted_container .logos_block {
+      min-width: 100%;
+      padding-bottom: 10px;
+      overflow: hidden; }
+      .info_block .trusted_container .logos_block .image_block {
+        float: left;
+        width: 25%; }
+        @media all and (min-width: 320px) and (max-width: 640px) {
+          .info_block .trusted_container .logos_block .image_block {
+            width: 100%;
+            clear: both;
+            padding-bottom: 35px; } }
+        .info_block .trusted_container .logos_block .image_block img {
+          display: block; }
+    .info_block .trusted_container .feedbacks_block {
+      margin: 0 auto;
+      max-width: 90%;
+      overflow: hidden; }
+      .info_block .trusted_container .feedbacks_block .feedback_block {
+        float: left;
+        width: 33%;
+        margin: 0 auto;
+        padding: 0 1%; }
+        @media all and (min-width: 320px) and (max-width: 980px) {
+          .info_block .trusted_container .feedbacks_block .feedback_block {
+            width: 100%;
+            clear: both;
+            padding-bottom: 35px; } }
+        .info_block .trusted_container .feedbacks_block .feedback_block .quote_icon {
+          margin-bottom: -22px; }
+          .info_block .trusted_container .feedbacks_block .feedback_block .quote_icon img {
+            display: block;
+            max-width: 100%; }
+        .info_block .trusted_container .feedbacks_block .feedback_block .quote_block {
+          background: #494848 url("../images/backgrounds/quote_bg.png") no-repeat center center fixed;
+          background-size: cover;
+          min-width: 100%;
+          height: auto;
+          margin-bottom: 10px; }
+          .info_block .trusted_container .feedbacks_block .feedback_block .quote_block p {
+            padding: 50px 35px 35px 35px;
+            margin: 0;
+            font: 16px/25px 'Source Sans Pro', 'Verdana', sans-serif;
+            color: #727272; }
+        .info_block .trusted_container .feedbacks_block .feedback_block .quote_autor {
+          font: 13px/25px 'Source Sans Pro', 'Verdana', sans-serif;
           color: #727272; }
-      .info_block .trusted_container .feedbacks_block .feedback_block .quote_autor {
-        font: 13px/25px 'Source Sans Pro', 'Verdana', sans-serif;
-        color: #727272; }
 
 .get_started_block {
   height: 449px;

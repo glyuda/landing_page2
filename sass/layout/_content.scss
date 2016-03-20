@@ -43,7 +43,7 @@ h4 {
 }
 
 .block_header {
-  width: 100%;
+  max-width: 100%;
   display: block;
   margin: 5px auto;
 
@@ -68,7 +68,6 @@ h4 {
 
 ul {
   padding: 0;
-  padding: 0;
 }
 
 li {
@@ -81,17 +80,36 @@ li {
     padding-top: 100px;
     padding-bottom: 100px;
 
-    width: 1168px;
+    max-width: 90%;
     overflow: hidden;
+
+    @media all and (min-width: 320px) and (max-width: 800px) {
+      padding-bottom: 75px;
+    }
 
     .browser_image {
       float: left;
-      margin: 0 25px;
+      max-width: 45%;
+      margin: 0 2%;
+
+      @media all and (min-width: 320px) and (max-width: 800px) {
+        clear: both;
+        max-width: 100%;
+
+        padding-bottom: 25px;
+      }
     }
 
     .feature_description {
       float: left;
-      margin: 0 25px;
+      max-width: 45%;
+      margin: 0 2%;
+
+      @media all and (min-width: 320px) and (max-width: 800px) {
+        clear: both;
+        max-width: 95%;
+        margin-bottom: 25px;
+      }
 
       .feature_header {
         overflow: hidden;
@@ -112,7 +130,6 @@ li {
       }
 
       .feature_general {
-        width: 536px;
         padding: 25px 0;
 
         p {
@@ -125,14 +142,13 @@ li {
           img {
             height: 32px;
             width: 32px;
-            max-width: 100%;
-            margin: 0;
+            margin: 5px;
             float: left;
           }
           .feature_descr {
-            padding: 0 20px;
+            width: 80%;
+            padding: 0 10px;
             float: left;
-            width: 504px;
 
             h3 {
               font-size: 16px;
@@ -152,35 +168,47 @@ li {
 } //.features_block
 
 .info_block {
-  padding-top: 115px;
-  padding-bottom: 105px;
+  padding-top: 100px;
+  padding-bottom: 55px;
 
   .landx_features_container {
-    width: 1075px;
+    max-width: 90%;
 
     .landx_features_general {
       .landx_features_general_boxes {
         overflow: hidden;
-        width: 100%;
+        max-width: 100%;
         padding-bottom: 50px;
 
         .landx_feature_box {
-          width: 300px;
-          height: 200px;
-          margin: 0 28px 45px 28px;
+          max-width: 33%;
+
+          @media all and (min-width: 640px) and (max-width: 980px) {
+            max-width: 50%;
+          }
+
+          @media all and (min-width: 320px) and (max-width: 640px) {
+            max-width: 99%;
+            clear: both;
+          }
+
+          margin: 0 auto;
+          padding-bottom: 45px;
           float: left;
 
           img {
-            width: 50px;
-            max-width: 100%;
-            height: 60px;
             display: block;
+            max-width: 90%;
+            height: 60px;
             padding-bottom: 15px;
           }
 
           .landx_feature_descr {
 
             h3 {
+              max-width: 90%;
+              margin: 0 auto;
+
               font-size: 20px;
               line-height: 65px;
 
@@ -188,6 +216,10 @@ li {
             }
 
             p {
+              max-width: 90%;
+              margin: 0 auto;
+              text-align: justify;
+
               font-size: 16px;
             }
           } //.landx_feature_descr
@@ -197,34 +229,37 @@ li {
   } //.landx_features_container
 
   .pricing_table_container {
-    width: 1075px;
 
     .pricing_table_general {
       overflow: hidden;
-      padding-left: 1%;
+      margin: 0 auto;
+      max-width: 90%;
 
       .tariff_block {
         float: left;
-        padding: 0 15px;
-        width: 33%;
+        min-width: 33%;
+        margin: 0 auto;
+        padding: 0 1%;
+
+        @media all and (min-width: 320px) and (max-width: 980px) {
+          min-width: 100%;
+          clear: both;
+          padding: 0 20% 15px 20%;
+        }
 
         .tariff_header {
-          height: 99px;
+          color: #fff;
 
           h3 {
             font-size: 20px;
             line-height: 65px;
             font-weight: 600;
-
-            color: #fff;
           }
 
           p {
             font: 16px/1 'Raleway', 'Arial', sans-serif;
 
-            color: #fff;
-
-            padding-bottom: 70px;
+            padding-bottom: 30px;
 
             .price {
               color: $blue_color;
@@ -248,6 +283,11 @@ li {
               margin: 0;
 
               font: 16px/24px 'Raleway', 'Arial', sans-serif;
+
+              @media all and (min-width: 320px) and (max-width: 640px) {
+                font-size: 12px;
+                line-height: 20px;
+              }
             }
 
             .option_value {
@@ -261,7 +301,6 @@ li {
 
         .block_footer {
           overflow: hidden;
-          height: 76px;
           padding: 15px 30px;
 
           p {
@@ -270,22 +309,40 @@ li {
 
             font: 16px/45px 'Raleway', 'Arial', sans-serif;
             font-weight: bold;
+
+            @media all and (min-width: 320px) and (max-width: 640px) {
+              clear: both;
+              min-width: 100%;
+
+              text-align: center;
+              font-size: 14px;
+              line-height: 36px;
+            }
           }
 
           button {
             float: right;
-            width: 96px;
+            min-width: 40%;
             height: 42px;
+
+            border-radius: 3px;
 
             font: 16px/1 'Raleway', 'Arial', sans-serif;
             font-weight: bold;
+
+            @media all and (min-width: 320px) and (max-width: 640px) {
+              clear: both;
+              min-width: 100%;
+
+              font-size: 14px;
+              line-height: 1;
+            }
           }
 
           .white_button {
             background-color: #fff;
 
             border: 1px solid #727272;
-            border-radius: 3px;
 
             color: #727272;
           }
@@ -294,7 +351,6 @@ li {
             background-color: $blue_color;
 
             border: 1px solid $blue_color;
-            border-radius: 3px;
 
             color: #fff;
           }
@@ -304,19 +360,31 @@ li {
   } //.pricing_table_container
 
   .watch_video_container {
-    width: 945px;
+    margin: 0 auto;
+    max-width: 90%;
 
     img {
-      padding-bottom: 40px;
+      display: block;
       max-width: 100%;
+      margin: 0 auto;
+
+      padding-bottom: 40px;
     }
 
     .features_list_block {
-      width: 861px;
+      max-width: 100%;
       overflow: hidden;
 
       .feature {
-        width: 33%;
+        min-width: 33%;
+        margin: 0 auto;
+        padding: 0 1%;
+
+        @media all and (min-width: 320px) and (max-width: 980px) {
+          min-width: 100%;
+          clear: both;
+          padding-bottom: 15px;
+        }
 
         p {
           font: 18px/64px 600 'Raleway', 'Arial', sans-serif;
@@ -330,8 +398,11 @@ li {
   } //watch_video_container
 
   .product_screenshots_container {
+    margin: 0 auto;
+    max-width: 90%;
+
     .swiper-container {
-      width: 1138px;
+      max-width: 100%;
       padding-top: 50px;
       padding-bottom: 50px;
     }
@@ -354,14 +425,23 @@ li {
   } //.product_screenshots_container
 
   .trusted_container {
+    margin: 0 auto;
+    max-width: 90%;
+
     .logos_block {
-      width: 661px;
+      min-width: 100%;
       padding-bottom: 10px;
       overflow: hidden;
 
       .image_block {
         float: left;
         width: 25%;
+
+        @media all and (min-width: 320px) and (max-width: 640px) {
+          width: 100%;
+          clear: both;
+          padding-bottom: 35px;
+        }
 
         img{
           display: block;
@@ -370,12 +450,21 @@ li {
     } //.logos_block
 
     .feedbacks_block {
-      width: 1155px;
+      margin: 0 auto;
+      max-width: 90%;
       overflow: hidden;
 
       .feedback_block {
         float: left;
         width: 33%;
+        margin: 0 auto;
+        padding: 0 1%;
+
+        @media all and (min-width: 320px) and (max-width: 980px) {
+          width: 100%;
+          clear: both;
+          padding-bottom: 35px;
+        }
 
         .quote_icon {
           margin-bottom: -22px;
@@ -387,10 +476,11 @@ li {
         }
 
         .quote_block {
-          background-image: url('../images/backgrounds/quote_bg.png');
+          background: #494848 url('../images/backgrounds/quote_bg.png') no-repeat center center fixed;
+          background-size: cover;
 
-          width: 361px;
-          height: 243px;
+          min-width: 100%;
+          height: auto;
           margin-bottom: 10px;
 
           p {
